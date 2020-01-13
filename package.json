@@ -1,0 +1,11 @@
+{
+  "name": "nodeclean",
+  "version": "1.0.0",
+  "description": "Free up disc space by perishing the node_module folder within all applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Benjamin Martin",
+  "license": "ISC"
+}
