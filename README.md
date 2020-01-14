@@ -1,6 +1,6 @@
 # Nodeclean
 
-#### About
+### About
 
 Nodeclean is a globally installable CLI cleaner tool for handling those seemingly endless node_modules folders.
 
@@ -10,7 +10,7 @@ You can also run the command with 'folder path', 'days' and 'depth' arguments to
 
 Running the depth argument above 3 levels deep will significantly slow down the script.
 
-### Installation
+## Installation
 
 `npm install nodeclean -g`
 
@@ -18,9 +18,9 @@ or
 
 `npm install nodeclean`
 
-### Use
+## Use
 
-#### Local
+### Local
 
 If you install the package into your own project you can extend the functionality to search for multiple folders without having to pass them individually into the CLI.
 
@@ -37,7 +37,7 @@ appFolders.forEach(folder => {
 
 After you do this, you can create an alias to run your app.
 
-#### Global
+### Global
 
 If you install this package globally you can run the command for anywhere on your computer.
 
@@ -66,6 +66,8 @@ This sets the amount of days between now and last modified, deleting any node_mo
 **Default is 1**
 
 This sets the level of nested children directories to search. This is handy when you have a parent folder containing different microservices. Setting this option to high will significantly slow down the script.
+
+### Example
 
 An example of the command is
 
