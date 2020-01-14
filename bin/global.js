@@ -24,16 +24,15 @@ const handleUserPrompt = () => {
     if (dayTag > 0) defualt.days = args[dayTag + 1] * 1;
     if (levelTag > 0) defualt.depth = args[levelTag + 1] * 1;
 
-    console.log(defualt);
-
     const rl = readline.createInterface({
         input: process.stdin,
         output: process.stdout
     });
 
     const consoleString = `\nAre you sure you want to run nodeclean?\n
-This will delete the node_modules folder from ${dir}
-You can re-install them by running npm i or npm install from within this directory
+This will delete the node_modules folder from child folders (apps) within ${dir} that havn't been editing in ${defualt.days} days.
+It will search child directories ${defualt.depth} levels deep.
+You can re-install them by running npm i or npm install from within the relevant directory
 
 (Type yes or y to continue or anything else to exit)\n\n`;
 
