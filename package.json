@@ -1,6 +1,6 @@
 {
     "name": "nodeclean",
-    "version": "1.0.1",
+    "version": "1.1.1",
     "description": "Free up disc space by perishing unwanted node_module folders",
     "main": "lib/index.js",
     "scripts": {
