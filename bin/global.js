@@ -8,18 +8,20 @@ const handleUserPrompt = () => {
 
     args.splice(0, 2);
 
+    if (args.length > 0) process.env.WITH_ARGS = true;
+
     const dir = args[0] || process.env.PWD;
 
     const defualt = {
         dir,
-        days: 30,
-        depth: 1
+        days: 1,
+        depth: 10
     };
 
     const dayTag = args.indexOf('-d');
     const levelTag = args.indexOf('-l');
 
-    if (dir === process.env.PWD) defualt.days = 0;
+    if (dir === process.env.PWD && !process.env.WITH_ARGS) defualt.days = 0;
 
     if (dayTag > 0) defualt.days = args[dayTag + 1] * 1;
     if (levelTag > 0) defualt.depth = args[levelTag + 1] * 1;
@@ -47,5 +49,3 @@ You can re-install them by running npm i or npm install from within the relevant
 };
 
 handleUserPrompt();
-
-// nodeclean.cleanFolder('/Users/benny/Documents/Applications', 150, 3);

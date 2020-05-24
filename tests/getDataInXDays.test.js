@@ -1,12 +1,10 @@
 /* eslint-disable node/no-unpublished-require */
 /* eslint-disable no-undef */
-const {assert} = require('chai');
+const { assert } = require('chai');
 const mkdirp = require('mkdirp');
-const {getDateXDays} = require('../lib/helpers');
+const { getDateXDays } = require('../lib/helpers');
 
-const {PWD} = process.env;
-
-const testFilePaths = [`${PWD}/tests/apps/app_1/node_modules`];
+const { PWD } = process.env;
 
 describe('Get Date In X Days', () => {
     it(`Match date 30 days ago (backward)`, () => {
